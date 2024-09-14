@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            width: 300px;
+            font-size: 16px;
+            justify-content: center;
+        }
+        button {
+            background-color: #336dab;
+            border-radius: 5px;
+            border: solid rgba(2, 8, 17, 0.37) 1px;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: #0c2846 0px 5px 10px;
+        }
+        button:disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
+        h3 {
+            text-align: center;
+            color: #0c2846;
+        }
+        .about {
+            font-size: 12px;  /* Make the paragraph smaller */
+            text-align: justify;  /* Centered and justified text */
+            color: #333;
+        }
+        .toggle-button {
+            margin-bottom: 25px;
+            background-color: #555;
+            color: white;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-content">
+        <h3>Scrape YouTube Videos</h3>
+        <p id="about" class="about">
+            This extension does not download videos, but it does create a markdown table with titles and links to all YouTube videos found on a page. 
+            This was designed with the intention of making it easier to track and organize videos found on a page for later viewing.
+        </p>
+        <button id="toggle-about" class="toggle-button">Hide About</button>  <!-- Toggle button to hide/show the About paragraph -->
+    </div>
+
+    <div class="main-content">
+        <span id="valid-url">No Youtube Videos present on page.</span>
+        <button id="scrape">Scrape & Download</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
